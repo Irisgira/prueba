@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <h1></h1>
+        
+    </header>
+    
+      <nav>
+        <img src="Logo.png" alt="Logo">
+    
+        <ul>
+          
+          <li><a href="#">Inventario de Dispositivos</a></li>
+         
+        </ul>
+      </nav>
+      <center>
+        <form name= "mantenimiento" action="mantenimiento.php" method="get">
+          <table border="1">   
+            <tr>
+              <td colspan="4"><label>Inventario</label></td>
+            </tr>
+            <tr><td colspan="4"><label >Registrar Dispositivo</label></td></tr>
+            <tr>
+              <td><label>Bloque</label></td><td><input type="text" value="" maxlength="1" name="txtbloque"></td>
+              <td><label>Oficina</label></td><td><input type="text" value="" maxlength="1" name="txtoficina"></td>
+    
+            </tr>
+            <tr>
+              <td><label>Serial</label></td><td><input type="text" value="" maxlength="20" name="txtserial"></td>
+              <td><label>Fecha Ingreso</label></td><td><input type="text" value="" maxlength="10" name="txtingreso" size="10"></td>
+            </tr>
+            <tr>
+              <td><label>Modelo</label></td><td><input type="text" value="" maxlength="15" name="txtmodelo"></td>
+              <td><label>Fecha Garantia</label></td><td><input type="text" value="" maxlength="10"  size="10" name="txtgarantia"></td>
+              
+            </tr>
+            <tr>
+              <td><label>Marca</label></td><td><input type="text" value="" maxlength="15" name="txtmarca"></td>
+       
+            </tr>
+    
+            <tr><td colspan="4" align="center">
+              <input type="submit" value="Nuevo" name="limpiardatos">
+              <input type="submit" value="Grabar" name="grabardatos">
+              <input type="submit" value="Modificar" name="modificardatos">
+              <input type="submit" value="Eliminar" name="eliminardatos">
+            </td>
+            </tr>
+            <!-- comentario lol-->
+            <php
+              $sql="SELECT * FROM dispositivos";
+              $result=mysqli_query($conn,$sql);
+              while($mostrar=mysqli_fetch_array($result))
+              {
+                          
+                            
+              
+              
+            ?>
+            <tr><td><php echo $mostrar['Bloque'] ?>
+             <td><php echo $mostrar['Oficina'] ?>
+             <td><php echo $mostrar['serial'] ?>
+             <td><php echo $mostrar['ingresp'] ?>
+             <td><php echo $mostrar['modelo'] ?>
+             <td><php echo $mostrar['garantia'] ?>
+             <td><php echo $mostrar['marca'] ?>
+             
+            </tr>
+            <php
+
+            }
+            ?>
+       
+          </table>
+        </form>
+      </center>
+</body>
+</html>

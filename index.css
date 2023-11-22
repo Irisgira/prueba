@@ -1,0 +1,103 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+
+  header {
+    background:url(edificio.jpeg)no-repeat;
+    background-size: cover;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    height: 75px;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #eee;
+    padding: 10px;
+
+  }
+
+  nav img {
+    max-height: auto; 
+    width: 200px;
+
+    
+  }
+
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+
+  nav li {
+    margin-right: 15px;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: #3b0f0f;
+    font-weight: bold;
+    font-size: 30px;
+  }
+  a:hover{
+    color: rgb(226, 115, 71);
+  }
+
+  
+/* estilo de la tabla*/
+
+  input[type=button], input[type=submit]
+  {
+    background-color: #eee;
+    border: none;
+    color: rgb(226, 115, 71);
+    font-weight: bold;
+    padding: 6px 20px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 4px;
+    box-shadow: 3px 3px 3px rgb(78, 15, 15);
+    position: center;
+    font-family: Arial, Helvetica, sans-serif;
+
+  }
+
+  input[type="text"]
+  {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #4b4645;
+    background-color: #f8f0f0;
+    padding: 4px;
+    text-align: left;
+    font-size: 16px;
+    margin: 4px 4px;
+    box-shadow: 2px 2px 2px black;
+
+  }
+  label{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 4px;
+    font-weight: bold;
+    color: rgb(226, 115, 71);
+    text-align: center;
+    align-items: center;
+    font-size: 18px;
+
+  }
+  table{
+    background-color: rgb(100, 92, 88);
+    padding: 5px 5px;
+
+  }
+  td{
+    padding: 6px 4px;
+  }
+  
